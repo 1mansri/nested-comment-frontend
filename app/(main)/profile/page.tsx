@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useUser } from "@clerk/nextjs";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Card, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { PostCard } from "@/components/post/PostCard";
@@ -68,7 +68,7 @@ export default function ProfilePage() {
             <p className="font-semibold">Troubleshooting steps:</p>
             <ul className="list-disc list-inside space-y-1 ml-2">
               <li>Ensure your backend server is running</li>
-              <li>Check if it's accessible at the configured URL</li>
+              <li>Check if it&apos;s accessible at the configured URL</li>
               <li>Verify CORS settings on the backend</li>
               <li>Check browser console for more details</li>
             </ul>
@@ -108,7 +108,7 @@ export default function ProfilePage() {
         animate={{ opacity: 1, x: 0 }}
       >
         <Link href="/">
-          <Button variant="ghost" size="sm" className="gap-2">
+          <Button variant="ghost" size="sm" className="gap-2 cursor-pointer  ">
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Button>
@@ -176,8 +176,8 @@ export default function ProfilePage() {
       >
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">My Posts</h2>
-          <Link href="/create-post">
-            <Button>Create New Post</Button>
+          <Link  href="/create-post">
+            <Button className="cursor-pointer">Create New Post</Button>
           </Link>
         </div>
 
@@ -193,10 +193,10 @@ export default function ProfilePage() {
           <Card className="p-12">
             <div className="text-center space-y-4">
               <p className="text-muted-foreground">
-                You haven't created any posts yet.
+                You haven&apos;t created any posts yet.
               </p>
-              <Link href="/create-post">
-                <Button>Create Your First Post</Button>
+              <Link passHref href="/create-post">
+                <Button className="cursor-pointer " >Create Your First Post</Button>
               </Link>
             </div>
           </Card>

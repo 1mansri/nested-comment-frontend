@@ -17,6 +17,7 @@ import { LoaderIcon, SendIcon } from "@/components/icons/comment-icons";
 import { apiClient } from "@/lib/api";
 import { useUserSync } from "@/lib/hooks/useUserSync";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Image as ImageIcon, X } from "lucide-react";
 
 export default function CreatePostPage() {
@@ -92,7 +93,7 @@ export default function CreatePostPage() {
             <p className="font-semibold">Troubleshooting steps:</p>
             <ul className="list-disc list-inside space-y-1 ml-2">
               <li>Ensure your backend server is running</li>
-              <li>Check if it's accessible at the configured URL</li>
+              <li>Check if it&apos;s accessible at the configured URL</li>
               <li>Verify CORS settings on the backend</li>
               <li>Check browser console for more details</li>
             </ul>
@@ -217,12 +218,15 @@ export default function CreatePostPage() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="relative rounded-lg overflow-hidden border"
+                      className="relative rounded-lg overflow-hidden border h-48"
                     >
-                      <img
+                      <Image
                         src={imagePreview}
                         alt="Preview"
-                        className="w-full h-48 object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 768px"
+                        className="object-cover"
+                        unoptimized
                         onError={() => {
                           setImagePreview("");
                           setError(

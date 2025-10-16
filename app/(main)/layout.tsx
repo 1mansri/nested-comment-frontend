@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header";
-
 export default function MainLayout({
   children,
 }: {
@@ -11,8 +9,8 @@ export default function MainLayout({
       <main className="flex-1 container py-8 px-4 md:px-6 lg:px-8">
         {children}
       </main>
-      <footer className="border-t py-6 text-center text-sm text-muted-foreground">
-        <p>Built with Next.js, Clerk, and Framer Motion</p>
+      <footer className="border-t py-8 text-center text-sm text-muted-foreground">
+        <p>@CoHub, Built with Next.js, Clerk, Motia.dev, Shadcn UI and Framer Motion</p>
       </footer>
     </div>
   );

@@ -30,7 +30,11 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({
 
   React.useEffect(() => {
     setMounted(true);
-  }, []);
+    // Apply default theme on mount if current theme is unset and defaultTheme provided
+    if (!theme && defaultTheme) {
+      setTheme(defaultTheme);
+    }
+  }, [defaultTheme, setTheme, theme]);
 
   const filteredThemes = includeSystem
     ? themes
@@ -132,7 +136,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({
         )}
       </AnimatePresence>
 
-      {filteredThemes.map((t, index) => {
+      {filteredThemes.map((t) => {
         const isActive = theme === t;
         const isHovered = hoveredTheme === t;
 

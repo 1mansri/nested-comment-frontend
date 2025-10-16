@@ -17,7 +17,6 @@ import { Comment } from "./Comment";
 import { CommentForm } from "./CommentForm";
 import {
   LoaderIcon,
-  SortIcon,
   TrendingIcon,
   ClockIcon,
 } from "@/components/icons/comment-icons";

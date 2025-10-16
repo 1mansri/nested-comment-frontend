@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CommentIcon } from "@/components/icons/comment-icons";
 import type { Post, User } from "@/lib/types";
 import { formatDistanceToNow } from "@/lib/date-utils";
 import Link from "next/link";

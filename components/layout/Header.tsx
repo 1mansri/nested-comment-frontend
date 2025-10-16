@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { UserButton, SignInButton, useUser } from "@clerk/nextjs";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PlusCircle, User } from "lucide-react";
@@ -66,7 +65,7 @@ export function Header() {
               )}
             </>
           )}
-        </nav>        
+        </nav>
       </div>
     </motion.header>
   );

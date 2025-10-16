@@ -14,6 +14,7 @@ import { formatDate } from "@/lib/date-utils";
 import type { Post, User } from "@/lib/types";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 export default function PostPage() {
   const params = useParams();
@@ -104,7 +105,11 @@ export default function PostPage() {
         animate={{ opacity: 1, x: 0 }}
       >
         <Link href="/">
-          <Button variant="ghost" size="sm" className="gap-2 bg-accent hover:bg-accent/90 cursor-pointer ">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="gap-2 bg-accent hover:bg-accent/90 cursor-pointer "
+          >
             <ArrowLeft className="h-4 w-4" />
             Back to Posts
           </Button>
@@ -120,10 +125,13 @@ export default function PostPage() {
         <Card className="overflow-hidden">
           {post.image_url && (
             <div className="relative h-64 md:h-96 w-full overflow-hidden">
-              <img
+              <Image
                 src={post.image_url}
                 alt={post.title}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 1024px"
+                className="object-cover"
+                unoptimized
               />
             </div>
           )}

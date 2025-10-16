@@ -21,7 +21,7 @@ import {
   LoaderIcon,
 } from "@/components/icons/comment-icons";
 import { CommentForm } from "./CommentForm";
-import type { Comment as CommentType, User } from "@/lib/types";
+import type { Comment as CommentType } from "@/lib/types";
 import { formatDistanceToNow } from "@/lib/date-utils";
 import { cn } from "@/lib/utils";
 import { userCache } from "@/lib/userCache";

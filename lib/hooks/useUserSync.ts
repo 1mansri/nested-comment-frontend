@@ -38,7 +38,7 @@ export function useUserSync() {
         try {
           user = await apiClient.getUser(clerkUser.id);
           console.log("useUserSync: Found existing user:", user.name);
-        } catch (err) {
+        } catch {
           // User doesn't exist, create them
           console.log("useUserSync: Creating new user");
           user = await apiClient.createUser({
