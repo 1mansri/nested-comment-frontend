@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NestedComments - Beautiful Nested Comment System
 
-## Getting Started
+A modern, feature-rich nested comment system built with Next.js 15, TypeScript, Clerk authentication, and Framer Motion animations.
 
-First, run the development server:
+## ✨ Features
+
+- 🔐 **Authentication**: Clerk integration with sign-in/sign-up
+- 💬 **Nested Comments**: Unlimited depth comment threading
+- 👍 **Upvote System**: Toggle upvotes on comments
+- 🔄 **Sorting**: Sort by newest, oldest, or most upvoted
+- 🎨 **Animations**: Smooth Framer Motion animations and micro-interactions
+- 👤 **User Profiles**: View user details and all their posts
+- ✍️ **Create Posts**: Rich post creation with cover images
+- 🎯 **Admin Features**: Admin users can delete any content
+- 📱 **Responsive Design**: Mobile-first, responsive UI
+- 🌓 **Dark Mode**: Built-in theme switching
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create `.env.local` file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Backend API
+NEXT_PUBLIC_BACKEND_URL=https://your-backend-url.com
 
-## Learn More
+# Clerk (get from https://dashboard.clerk.com)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxxxx
+CLERK_SECRET_KEY=sk_test_xxxxx
 
-To learn more about Next.js, take a look at the following resources:
+# Clerk URLs
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Setup Clerk Webhook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Go to [Clerk Dashboard](https://dashboard.clerk.com/) → Webhooks
+2. Add endpoint: `https://your-backend-url.com/clerk-webhook`
+3. Subscribe to: `user.created`, `user.updated`, `user.deleted`
+4. Copy signing secret to backend `.env`
 
-## Deploy on Vercel
+### 4. Run Development Server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000)
+
+## 🎯 Key Features
+
+### Nested Comments
+
+- Unlimited nesting depth (default max: 5 levels)
+- Lazy loading replies on demand
+- Visual indentation hierarchy
+- Real-time upvote toggle
+
+### Sorting Options
+
+- **Newest First**: Recent comments on top
+- **Oldest First**: Original order
+- **Most Upvoted**: Popular comments first
+
+### Admin Features
+
+- Delete any post/comment
+- Admin badge display
+- Soft delete (marked as deleted)
+
+## 📁 Project Structure
+
+```
+app/
+  (main)/              # Main app pages
+    page.tsx           # Home - post list
+    post/[id]/         # Individual post
+    profile/           # User profile
+    create-post/       # Create new post
+  sign-in/             # Auth pages
+  sign-up/
+components/
+  comments/            # Comment system
+  post/                # Post components
+  layout/              # Header, etc.
+  ui/                  # Shadcn components
+lib/
+  api.ts               # API client
+  types.ts             # TypeScript types
+  hooks/               # Custom hooks
+```
+
+## 🔧 Tech Stack
+
+- Next.js 15 (App Router + Turbopack)
+- TypeScript
+- Clerk Authentication
+- Tailwind CSS v4
+- Shadcn UI + Radix UI
+- Framer Motion + GSAP
+- Lucide Icons
+
+## 🎨 Making Admin User
+
+In Clerk Dashboard → Users → Select User → Metadata:
+
+```json
+{
+  "role": "admin"
+}
+```
+
+## 🐛 Troubleshooting
+
+**User not syncing?**
+
+- Check Clerk webhook configuration
+- Verify signing secret in backend
+
+**Comments not loading?**
+
+- Verify `NEXT_PUBLIC_BACKEND_URL`
+- Check backend is running
+- Check browser console
+
+## 🚀 Deploy
+
+### Vercel (Recommended)
+
+```bash
+vercel
+```
+
+Add environment variables in Vercel dashboard.
+
+## 📝 API Integration
+
+See `backend-integration-guide.md` for complete API documentation.
+
+## 📄 License
+
+MIT License
+
+---
+
+Built with ❤️ using Next.js, Clerk, and Framer Motion

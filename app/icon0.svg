@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(1.25,0,0,1.25,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px"><svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+<circle style="fill:#DB2B42;" cx="256" cy="256" r="256"></circle>
+<g>
+	<polygon style="fill:#FFFFFF;" points="131.712,423.656 131.712,354.832 217.744,354.832 	"></polygon>
+	<path style="fill:#FFFFFF;" d="M138.328,368.256h179.848c31.952,0,58.096-26.144,58.096-58.096v-67.072
+		c0-31.952-26.144-58.096-58.096-58.096H138.328c-31.952,0-58.096,26.144-58.096,58.096v67.072
+		C80.232,342.112,106.376,368.256,138.328,368.256z"></path>
+</g>
+<path d="M445.848,235.504H200.544c-12.264,0-22.304-10.032-22.304-22.304V57.104c0-12.264,10.032-22.304,22.304-22.304h245.304
+	c12.264,0,22.304,10.032,22.304,22.304v156.104C468.152,225.472,458.112,235.504,445.848,235.504z"></path>
+<polygon points="328.744,302.408 328.744,213.208 217.248,213.208 "></polygon>
+</svg></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1133)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(0.875,0,0,0.875,150,150)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px"><svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+<circle style="fill:#DB2B42;" cx="256" cy="256" r="256"></circle>
+<g>
+	<polygon style="fill:#FFFFFF;" points="131.712,423.656 131.712,354.832 217.744,354.832 	"></polygon>
+	<path style="fill:#FFFFFF;" d="M138.328,368.256h179.848c31.952,0,58.096-26.144,58.096-58.096v-67.072
+		c0-31.952-26.144-58.096-58.096-58.096H138.328c-31.952,0-58.096,26.144-58.096,58.096v67.072
+		C80.232,342.112,106.376,368.256,138.328,368.256z"></path>
+</g>
+<path d="M445.848,235.504H200.544c-12.264,0-22.304-10.032-22.304-22.304V57.104c0-12.264,10.032-22.304,22.304-22.304h245.304
+	c12.264,0,22.304,10.032,22.304,22.304v156.104C468.152,225.472,458.112,235.504,445.848,235.504z"></path>
+<polygon points="328.744,302.408 328.744,213.208 217.248,213.208 "></polygon>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1133"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g></svg>
