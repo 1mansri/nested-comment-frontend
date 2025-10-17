@@ -30,10 +30,10 @@ export function PostCard({
         transition={{ duration: 0.3 }}
       >
         <Card className="overflow-hidden hover:shadow-xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col">
-          {post.image_url && (
+
             <div className="relative h-48 w-full overflow-hidden bg-muted">
               <motion.img
-                src={post.image_url}
+                src={post.image_url ?? "/placeholder.png"}
                 alt={post.title}
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}
@@ -42,7 +42,7 @@ export function PostCard({
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
-          )}
+
           <CardHeader className="flex-1">
             <div className="flex items-center gap-3 mb-3">
               <motion.div

@@ -11,6 +11,7 @@ import { apiClient } from "@/lib/api";
 import { useUserSync } from "@/lib/hooks/useUserSync";
 import type { Post, User } from "@/lib/types";
 
+
 export default function HomePage() {
   const { user, isLoading: isUserLoading } = useUserSync();
   const [posts, setPosts] = useState<Post[]>([]);
@@ -110,7 +111,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="space-y-8 px-8 pt-10">
+    <div className="space-y-8 px-8 py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

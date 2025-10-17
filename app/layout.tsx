@@ -4,8 +4,8 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { shadcn } from "@clerk/themes";
-import { Header } from "@/components/layout/Header";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import { HeroHeader } from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +38,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Header />
+            <HeroHeader />
             {children}
             {/* Theme Switcher - Fixed Bottom Right with responsive positioning */}
             <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 transition-all duration-300">
