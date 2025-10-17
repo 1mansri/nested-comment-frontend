@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { useScroll, motion } from "motion/react";
@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { UserButton, SignInButton, useUser } from "@clerk/nextjs";
 
 const menuItems = [
+  { name: "Home", href: "/" },
   { name: "Create Post", href: "/create-post" },
   { name: "Explore Posts", href: "/recent-posts" },
   { name: "Profile", href: "/profile" },
@@ -104,7 +105,7 @@ export const HeroHeader = () => {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.2 }}
-                            className="flex items-center gap-2 cursor-pointer"
+                            className="flex items-center justify-center w-12 h-12 gap-2 cursor-pointer border border-2-accent hover:border-accent-foreground rounded-full p-1 duration-150"
                         >
                           <UserButton
                             appearance={{
@@ -113,7 +114,7 @@ export const HeroHeader = () => {
                               },
                             }}
                           />
-                          <span className="md:hidden ml-2 ">User menu</span>
+                          {/* <span className="md:hidden ml-2 ">User menu</span> */}
                         </motion.div>
                       </>
                     ) : (

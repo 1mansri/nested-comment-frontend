@@ -126,7 +126,7 @@ export default function CreatePostPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
+    <div className="max-w-3xl mx-auto py-10 space-y-8">
       {/* Back Button */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}

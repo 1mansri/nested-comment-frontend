@@ -111,7 +111,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="space-y-8 px-8 py-10">
+    <div className="space-y-8 px-1 md:px-8 py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
